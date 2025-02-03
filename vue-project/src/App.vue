@@ -1,3 +1,9 @@
+<template>
+    <ul>
+      <li v-for="country in countries" :key="country.id">{{ country.name }}</li>
+    </ul>
+</template>
+
 <script setup>
 import { ref, onMounted } from 'vue'
 import { supabase } from './lib/supabaseClient'
@@ -16,11 +22,6 @@ onMounted(() => {
 
 
 <template>
-    <ul>
-      <li v-for="instrument in instruments" :key="instrument.id">{{ instrument.name }}</li>
-    </ul>
-
-
   <h1>Food</h1>
   <personal-profile/><br>
   <food-item/><br>
